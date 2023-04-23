@@ -13,14 +13,17 @@ const squel = require("squel");
 const mysql = require("mysql");
 const abc = require("./arrays");
 
+const { config } = require('dotenv');
+config();
+
 /**
  * Declaramos las conexiones de MySQL
  */
-const MYSQL_DB_HOST = "localhost";
-const MYSQL_DB_USER = "kmilo";
-const MYSQL_DB_PASSWORD = "12345";
-const MYSQL_DB_NAME = "kmilo";
-const MYSQL_DB_PORT = "3306";
+const MYSQL_DB_HOST = process.env.DB_HOST || "localhost";
+const MYSQL_DB_USER = process.env.DB_USER || "kmilo";
+const MYSQL_DB_PASSWORD = process.env.DB_PASS || "12345";
+const MYSQL_DB_NAME = process.env.DB_NAME || "kmilo";
+const MYSQL_DB_PORT = parseInt(process.env.DB_PORT) || "3306";
 
 const connection = mysql.createConnection({
   host     : MYSQL_DB_HOST,
