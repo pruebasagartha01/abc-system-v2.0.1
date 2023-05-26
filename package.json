@@ -1,27 +1,23 @@
 {
-    "name": "base-bailey-mysql",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
+    "private": true,
     "scripts": {
-        "pre-copy": "cd .. && npm run  copy.lib base-baileys-mysql",
-        "start": "node app.js"
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
     },
-    "keywords": [],
-    "dependencies": {
-        "@adiwajshing/baileys": "4.4.0",
-        "@bot-whatsapp/bot": "latest",
-        "@bot-whatsapp/cli": "latest",
-        "@bot-whatsapp/database": "latest",
-        "@bot-whatsapp/portal": "latest",
-        "@bot-whatsapp/provider": "latest",
-        "mime-types": "2.1.35",
-        "mysql": "^2.18.1",
-        "mysql2": "^2.3.3",
-        "sharp": "^0.32.0",
-        "squel": "^5.13.0",
-        "wa-sticker-formatter": "4.3.2"
-    },
-    "author": "",
-    "license": "ISC"
+    "devDependencies": {
+        "@popperjs/core": "^2.10.2",
+        "axios": "^0.21",
+        "bootstrap": "^5.1.3",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1"
+    }
 }
